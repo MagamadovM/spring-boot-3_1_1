@@ -46,4 +46,5 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUser(@Valid User user) {
         userDAO.updateUser(user);
-    }}
+    }
+}

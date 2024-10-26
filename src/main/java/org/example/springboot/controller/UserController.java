@@ -19,7 +19,7 @@ public class UserController {
 
 	private final UserService userService;
 
-	@Autowired()
+    @Autowired()
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
@@ -37,8 +37,8 @@ public class UserController {
 	}
 
 	@GetMapping("/new")
-	public String addUser(User user) {
-		return "create";
+	public String addUser(@ModelAttribute("user") User user) {
+        return "create";
 	}
 
 	@PostMapping("/new")
